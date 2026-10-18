@@ -13,6 +13,14 @@
         <p id="tab-status" role="status"></p>
       </header>
 
+      <section class="opacity-control" aria-labelledby="opacity-label">
+        <div class="opacity-heading">
+          <label id="opacity-label" for="buttons-opacity">Opacidad de los botones</label>
+          <output id="opacity-value" for="buttons-opacity">0%</output>
+        </div>
+        <input id="buttons-opacity" type="range" min="0" max="50" step="1" value="0">
+      </section>
+
       <form id="key-form">
         <label for="api-key">API Key de OpenRouter</label>
         <div class="key-row">

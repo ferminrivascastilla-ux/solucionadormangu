@@ -29,6 +29,16 @@ form { padding: 14px 0; }
 label { display: block; margin-bottom: 6px; font-size: 12px; font-weight: 650; }
 .key-row { display: flex; gap: 7px; }
 
+.opacity-control {
+  padding: 12px 0 2px;
+  border-bottom: 1px solid #d8ddd5;
+}
+
+.opacity-heading { display: flex; align-items: center; justify-content: space-between; }
+.opacity-heading label { margin: 0; }
+.opacity-heading output { color: #285c47; font-size: 12px; font-variant-numeric: tabular-nums; }
+#buttons-opacity { display: block; width: 100%; margin: 10px 0 8px; accent-color: #285c47; }
+
 input {
   min-width: 0;
   flex: 1;
