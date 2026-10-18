@@ -19,6 +19,7 @@
   outline: none !important;
   transition: none !important;
   filter: none !important;
+  pointer-events: auto !important;
 }
 
 .capture-resolver-left {

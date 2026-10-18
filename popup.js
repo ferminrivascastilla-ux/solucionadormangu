@@ -16,7 +16,7 @@ opacitySlider.addEventListener('input', async () => {
 
   if (activeTab?.id) {
     chrome.tabs.sendMessage(activeTab.id, {
-      type: 'UPDATE_BUTTONS_OPACITY',
+      type: 'UPDATE_OPACITY',
       opacity: buttonsOpacity
     }).catch(() => {});
   }

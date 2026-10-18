@@ -23,6 +23,12 @@
 
   chrome.storage.local.get({ buttonsOpacity: 0 }).then(({ buttonsOpacity }) => {
     setButtonsOpacity(buttonsOpacity);
+  }).catch(() => setButtonsOpacity(0));
+
+  chrome.storage.onChanged.addListener((changes, area) => {
+    if (area === 'local' && changes.buttonsOpacity) {
+      setButtonsOpacity(changes.buttonsOpacity.newValue);
+    }
   });
 
   left.addEventListener('click', () => requestCapture('solve'));
@@ -30,7 +36,7 @@
 
   let hideTimer;
   chrome.runtime.onMessage.addListener((message) => {
-    if (message?.type === 'UPDATE_BUTTONS_OPACITY') {
+    if (message?.type === 'UPDATE_OPACITY' || message?.type === 'UPDATE_BUTTONS_OPACITY') {
       setButtonsOpacity(message.opacity);
       return;
     }
