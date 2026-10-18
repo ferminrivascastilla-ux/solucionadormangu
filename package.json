@@ -1,0 +1,9 @@
+{
+  "name": "captura-y-resolucion-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependencias locales para la extensión de Chrome Manifest V3.",
+  "dependencies": {
+    "tesseract.js": "^6.0.1"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Captura y resolución",
+  "version": "1.0.0",
+  "description": "Captura la pestaña actual, analiza ejercicios con visión y copia la respuesta.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "https://openrouter.ai/*",
+    "https://tessdata.projectnaptha.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Configurar captura y resolver",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; worker-src 'self'; connect-src 'self' https://openrouter.ai https://tessdata.projectnaptha.com"
+  }
+}

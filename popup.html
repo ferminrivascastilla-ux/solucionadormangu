@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Captura y resolución</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Captura y resolución</h1>
+        <p id="tab-status" role="status"></p>
+      </header>
+
+      <form id="key-form">
+        <label for="api-key">API Key de OpenRouter</label>
+        <div class="key-row">
+          <input id="api-key" name="apiKey" type="password" autocomplete="off" placeholder="sk-or-…">
+          <button type="submit" aria-label="Guardar API Key">Guardar</button>
+        </div>
+        <p id="save-status" role="status"></p>
+      </form>
+
+      <section aria-labelledby="history-title">
+        <div class="history-heading">
+          <h2 id="history-title">Historial</h2>
+          <button id="clear-history" class="quiet-button" type="button">Borrar</button>
+        </div>
+        <ol id="history-list" aria-live="polite"></ol>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

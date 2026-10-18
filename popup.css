@@ -1,0 +1,86 @@
+:root {
+  color-scheme: light;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: #20251f;
+  background: #f4f5f0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 360px;
+  min-height: 320px;
+  margin: 0;
+  background: #f4f5f0;
+}
+
+main { padding: 17px; }
+
+header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d8ddd5;
+}
+
+h1 { margin: 0; font-size: 18px; }
+h2 { margin: 0; font-size: 14px; }
+p { margin: 6px 0 0; font-size: 12px; color: #60695f; }
+
+form { padding: 14px 0; }
+label { display: block; margin-bottom: 6px; font-size: 12px; font-weight: 650; }
+.key-row { display: flex; gap: 7px; }
+
+input {
+  min-width: 0;
+  flex: 1;
+  padding: 8px 9px;
+  border: 1px solid #c6cec3;
+  border-radius: 4px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  padding: 8px 11px;
+  border: 1px solid #285c47;
+  border-radius: 4px;
+  background: #285c47;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button:focus-visible, input:focus-visible { outline: 2px solid #b25f32; outline-offset: 2px; }
+.history-heading { display: flex; align-items: center; justify-content: space-between; }
+.quiet-button { padding: 4px 7px; border-color: transparent; background: transparent; color: #285c47; }
+
+#history-list {
+  display: grid;
+  gap: 8px;
+  max-height: 330px;
+  margin: 10px 0 0;
+  padding: 0 3px 0 0;
+  overflow: auto;
+  list-style: none;
+}
+
+.history-entry {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 9px;
+  padding: 8px 0;
+  border-top: 1px solid #d8ddd5;
+}
+
+.history-entry img {
+  width: 72px;
+  height: 48px;
+  border-radius: 3px;
+  background: #e2e6df;
+  object-fit: cover;
+}
+
+.history-entry time, .history-entry .mode { display: block; color: #60695f; font-size: 10px; }
+.history-entry .answer { display: -webkit-box; margin-top: 4px; overflow: hidden; font-size: 12px; line-height: 1.35; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.empty-history { padding: 14px 0; color: #60695f; font-size: 12px; }
